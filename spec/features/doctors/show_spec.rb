@@ -43,15 +43,3 @@ RSpec.describe 'Doctors show page,' do
     expect(current_path).to eq(doctor_path(@doctor_1))
   end
 end
-
-
-# User Story 3, Remove a Patient from a Doctor
-# ​
-# As a visitor
-# When I visit a Doctor's show page
-# Next to each patient's name, I see a button to remove that patient from that doctor's caseload
-# When I click that button for one patient
-# I'm brought back to the Doctor's show page
-# And I no longer see that patient's name listed
-#
-# NOTE: the patient record should not be deleted entirely

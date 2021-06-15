@@ -14,7 +14,6 @@ RSpec.describe 'Hospital show page,' do
 
   it 'displays number of doctors employed at hospital' do
 
-    # expect(@hospital_1.doctor_count).to eq(4) #come back to this expectation if time
     expect(page).to have_content(4)
   end
 
