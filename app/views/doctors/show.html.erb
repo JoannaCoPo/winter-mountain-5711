@@ -5,5 +5,8 @@
 <p>Current Residency: <%= @doctor.hospital.name %></p>
 
 <p>Active Patients: <% @doctor.patients.each do |patient| %></p>
+<section id='patient-details-<%= patient.id %>'>
     <p><%= patient.name %></p>
+    <%= button_to "Remove #{patient.name}", doctor_patient_doctor_path(@doctor, patient), method: :delete, local: true %>
+</section>
 <% end %>
