@@ -15,7 +15,7 @@ class Doctor < ApplicationRecord
     collection.join(', ')
   end
 
-  # def self.doctor_universities                    # option using select
+  # def self.doctor_universities                    # option using select, though I feel like there's got to be a better way
   #   collection = select('distinct university').map(&:university)
   #   collection.join(', ')
   # end
