@@ -1,0 +1,9 @@
+<h3><%= "Practitioner Information: #{@doctor.name}" %></h3>
+
+<p>Specialty: <%= @doctor.specialty %></p>
+<p>Education: <%= @doctor.university %></p>
+<p>Current Residency: <%= @doctor.hospital.name %></p>
+
+<p>Active Patients: <% @doctor.patients.each do |patient| %></p>
+    <p><%= patient.name %></p>
+<% end %>
