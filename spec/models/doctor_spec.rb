@@ -18,11 +18,11 @@ RSpec.describe Doctor do
     end
 
     it "can indicate the number of doctors that work at a hospital" do
-      expect(Doctor.doctor_count).to eq(4)
+      expect(@hospital_1.doctor_count).to eq(4)
     end
 
     it "can return unique list of universities that a hospital's doctors attended" do
-      expect(Doctor.doctor_universities).to eq("Great University, Ivy University, International University")
+      expect(Doctor.doctor_universities).to eq("Ivy University, Great University, International University")
     end
   end
 end

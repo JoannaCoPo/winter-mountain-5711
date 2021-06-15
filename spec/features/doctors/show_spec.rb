@@ -36,7 +36,6 @@ RSpec.describe 'Doctors show page,' do
     within("#patient-details-#{@patient_1.id}") do
       expect(page).to have_button("Remove #{@patient_1.name}")
       click_button "Remove #{@patient_1.name}"
-      save_and_open_page
     end
 
     expect(page).to_not have_content(@patient_1.name)
