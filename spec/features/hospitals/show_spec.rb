@@ -14,15 +14,15 @@ RSpec.describe 'Hospital show page,' do
 
   it 'displays number of doctors employed at hospital' do
 
-    # expect(@hospital_1.doctor_count).to eq(4) #com back to this expectation if time
+    # expect(@hospital_1.doctor_count).to eq(4) #come back to this expectation if time
     expect(page).to have_content(4)
   end
-end
 
-# User Story 2, Hospital Show Page
-# ​
-# As a visitor
-# When I visit a hospital's show page
-# I see the hospital's name
-# And I see the number of doctors that work at this hospital
-# And I see a unique list of universities that this hospital's doctors attended
+  it 'displays a unique list of universities that this hospitals doctors attended' do
+
+    expect(page).to have_content(@doctor_1.university, count:1)
+    expect(page).to have_content(@doctor_2.university)
+    expect(page).to have_content(@doctor_3.university)
+    expect(page).to have_content(@doctor_4.university)
+  end
+end

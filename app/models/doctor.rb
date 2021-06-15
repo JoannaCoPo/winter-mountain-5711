@@ -6,4 +6,9 @@ class Doctor < ApplicationRecord
   def self.doctor_count
     all.count
   end
+
+  def self.doctor_universities
+    collection = pluck(:university).uniq
+    collection.join(', ')
+  end
 end
